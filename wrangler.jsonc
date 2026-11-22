@@ -1,0 +1,12 @@
+// Cloudflare deployment settings.
+// Cloudflare runs `npm run build` (which writes the static site to ./out),
+// then `npx wrangler deploy` uploads ./out as static files. No server code.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "harry-web-studio",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
