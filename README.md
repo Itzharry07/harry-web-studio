@@ -36,6 +36,17 @@ npm run build
 
 This writes the finished site to the `out/` folder.
 
+## Test the whole site (70 automatic checks)
+
+Clicks through every page in a real Edge browser, on desktop and phone sizes: navigation, mobile menu,
+sections appearing, images, FAQ, the WhatsApp contact form, both demos, going back from a demo, and the 404 page.
+
+```powershell
+npm run test:site -- https://harry-web-studio.harrywebstudio73.workers.dev
+```
+
+Use `http://localhost:3000` instead to test your local copy while `npm run dev` is running.
+
 ## Contact form (Formspree)
 
 Until you add a Formspree ID, the form opens the visitor's email app with their message pre-filled.
