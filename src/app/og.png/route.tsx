@@ -24,19 +24,13 @@ export function GET() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <div
-            style={{
-              width: 64,
-              height: 64,
-              borderRadius: 18,
-              background: "#15140f",
-              display: "flex",
-              position: "relative",
-            }}
-          >
-            <div style={{ position: "absolute", left: 16, top: 16, width: 18, height: 18, borderRadius: 5, background: "#ff5a2c" }} />
-            <div style={{ position: "absolute", left: 30, top: 30, width: 18, height: 18, borderRadius: 5, background: "#f6f4ef" }} />
-          </div>
+          {/* Same kite mark as src/components/logo.tsx */}
+          <svg width="64" height="64" viewBox="0 0 32 32">
+            <rect width="32" height="32" rx="9" fill="#15140f" />
+            <path d="M16 5 L8 13.5 L16 26 Z" fill="#ff5a2c" />
+            <path d="M16 5 L24 13.5 L16 26 Z" fill="#f6f4ef" />
+            <path d="M8 13.5 H24" stroke="#15140f" strokeWidth="1.2" />
+          </svg>
           <div style={{ fontSize: 34, fontWeight: 700 }}>{site.name}</div>
         </div>
 

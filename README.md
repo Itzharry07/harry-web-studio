@@ -1,12 +1,13 @@
-# Studio site
+# Kitepost Studio
 
-Marketing website for my web-design business. Next.js 16 (static export) + Tailwind CSS 4.
+Marketing website for Kitepost Studio, my web-design business. Next.js 16 (static export) + Tailwind CSS 4.
 
 ## Before you launch: edit these
 
 1. **`src/content/site.ts`**: business name, email, domain, Formspree ID, Funded Edge links.
 2. **`src/content/content.ts`**: services, package contents, process, FAQ and portfolio text.
-3. **Logo**: `src/components/logo.tsx` and `src/app/icon.svg` (browser tab icon) are a placeholder mark.
+3. **Logo**: a simple kite mark, drawn in three places: `src/components/logo.tsx` (header/footer),
+   `src/app/icon.svg` (browser tab icon) and `src/app/og.png/route.tsx` (share image). Update all three if you change it.
 
 Everything else reads from those files, including the page title, the share image (`/og.png`) and the sitemap.
 

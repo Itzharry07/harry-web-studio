@@ -7,7 +7,7 @@
  */
 export const site = {
   /** Your business name, shown in the header, footer, titles and share image. */
-  name: "Studio Name",
+  name: "Kitepost Studio",
 
   /** One line under the name in search results and link previews. */
   tagline: "Fast, modern websites for businesses of every size",
@@ -20,7 +20,7 @@ export const site = {
    * Your live domain, without a trailing slash. Used for the sitemap, canonical
    * links and share images. Set NEXT_PUBLIC_SITE_URL in Vercel, or edit the fallback.
    */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://studio-site.vercel.app").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://kitepost-studio.vercel.app").replace(/\/$/, ""),
 
   /** Public contact email. Shown on the site and used by the email link. */
   email: "hello@example.com",
