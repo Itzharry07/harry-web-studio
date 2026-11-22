@@ -98,7 +98,7 @@ export function Work() {
                 className="block h-auto w-full"
               />
             </BrowserFrame>
-            <p className="mt-3 text-center font-mono text-[11px] text-night-muted">Real screenshot of the live product</p>
+            <p className="mt-3 text-center font-mono text-[11px] text-night-muted">Real screenshot · open the live site above</p>
           </div>
 
           {/* Second screenshot: hover (or tab to it) to scroll through the features section */}
