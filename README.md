@@ -10,6 +10,13 @@ Marketing website for my web-design business. Next.js 16 (static export) + Tailw
 
 Everything else reads from those files, including the page title, the share image (`/og.png`) and the sitemap.
 
+## Portfolio screenshots
+
+Real Funded Edge screenshots live in `public/work/` (`funded-edge-landing.webp`, `funded-edge-features.webp`),
+used in `src/components/work.tsx`. To replace one, save a new image with the same name (WebP or JPG around
+1600px wide keeps the page fast). If you change the format, update the `src` in `work.tsx`.
+Don't use screenshots that show real account balances or personal data.
+
 ## Run it on your computer
 
 ```powershell

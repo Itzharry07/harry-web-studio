@@ -142,17 +142,6 @@ body {
   animation: marquee 38s linear infinite;
 }
 
-/* Equity curve in the case-study illustration draws itself on reveal */
-.draw-line {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  transition: stroke-dashoffset 2.2s var(--ease) 0.3s;
-}
-.js .is-visible .draw-line,
-html:not(.js) .draw-line {
-  stroke-dashoffset: 0;
-}
-
 /* FAQ accordion (native <details>, no JS needed) */
 details > summary {
   list-style: none;
@@ -203,10 +192,6 @@ details[open]::details-content {
   .cursor,
   .marquee {
     animation: none !important;
-  }
-  .draw-line {
-    stroke-dashoffset: 0;
-    transition: none;
   }
   *,
   ::before,

@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+import Image from "next/image";
 import { ArrowUpRight, Check } from "lucide-react";
 import { concepts, fundedEdge } from "@/content/content";
 import { site } from "@/content/site";
@@ -85,11 +87,49 @@ export function Work() {
             )}
           </div>
 
-          <div className="relative min-h-[320px] border-t border-night-line bg-[radial-gradient(ellipse_at_top_right,rgb(255_90_44/0.18),transparent_60%)] p-5 sm:p-8 lg:border-l lg:border-t-0">
-            <DashboardIllustration />
-            <p className="mt-3 text-center font-mono text-[11px] text-night-muted">
-              Illustration of the Funded Edge dashboard layout
-            </p>
+          <div className="flex flex-col justify-center border-t border-night-line bg-[radial-gradient(ellipse_at_top_right,rgb(255_90_44/0.18),transparent_60%)] p-5 sm:p-8 lg:border-l lg:border-t-0">
+            <BrowserFrame url="Funded Edge · landing page">
+              <Image
+                src="/work/funded-edge-landing.webp"
+                alt="Funded Edge landing page: headline 'Pass the challenge. Keep the account.' next to an account card with an equity curve, a rule-break alert and drawdown progress bars"
+                width={1600}
+                height={1000}
+                sizes="(min-width: 1024px) 560px, 100vw"
+                className="block h-auto w-full"
+              />
+            </BrowserFrame>
+            <p className="mt-3 text-center font-mono text-[11px] text-night-muted">Real screenshot of the live product</p>
+          </div>
+
+          {/* Second screenshot: hover (or tab to it) to scroll through the features section */}
+          <div className="border-t border-night-line p-5 sm:p-8 lg:col-span-2">
+            <div className="grid items-center gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
+              <div>
+                <p className="font-mono text-xs uppercase tracking-[0.18em] text-night-muted">Inside the landing page</p>
+                <p className="mt-3 text-xl font-semibold tracking-tight">Every feature explained in one clear grid</p>
+                <p className="mt-2 leading-relaxed text-night-muted">
+                  The landing page walks traders through features, how it works, pricing and an FAQ, written in their
+                  own language. <span className="hidden lg:inline">Hover the screenshot to scroll through it.</span>
+                </p>
+              </div>
+              <BrowserFrame url="Funded Edge · features section">
+                <div
+                  tabIndex={0}
+                  aria-label="Screenshot of the Funded Edge features section"
+                  className="group/pan relative h-[300px] overflow-hidden outline-none sm:h-[380px]"
+                >
+                  <Image
+                    src="/work/funded-edge-features.webp"
+                    alt="Funded Edge features grid: every account in one cockpit, drawdown guardrails, a rule engine, a trading journal, CSV import, rule-break log, an Edge Score and payout goals"
+                    width={1600}
+                    height={1613}
+                    sizes="(min-width: 1024px) 640px, 100vw"
+                    className="absolute inset-x-0 top-0 h-auto w-full translate-y-0 transition-transform duration-[4000ms] ease-in-out group-hover/pan:-translate-y-[calc(100%-300px)] group-focus/pan:-translate-y-[calc(100%-300px)] sm:group-hover/pan:-translate-y-[calc(100%-380px)] sm:group-focus/pan:-translate-y-[calc(100%-380px)]"
+                  />
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-night to-transparent transition-opacity group-hover/pan:opacity-0" />
+                </div>
+              </BrowserFrame>
+            </div>
           </div>
         </article>
 
@@ -136,69 +176,16 @@ export function Work() {
   );
 }
 
-function DashboardIllustration() {
+function BrowserFrame({ url, children }: { url: string; children: ReactNode }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-night-line bg-night shadow-2xl" aria-hidden>
-      <div className="flex">
-        <div className="hidden w-14 shrink-0 flex-col items-center gap-3 border-r border-night-line py-4 sm:flex">
-          <div className="size-7 rounded-lg bg-accent" />
-          {[0, 1, 2, 3, 4].map((i) => (
-            <div key={i} className={`size-6 rounded-md ${i === 0 ? "bg-paper/20" : "bg-paper/8"}`} />
-          ))}
-        </div>
-        <div className="flex-1 space-y-3 p-4">
-          <div className="flex items-center justify-between">
-            <div className="h-2.5 w-24 rounded-full bg-paper/70" />
-            <div className="h-5 w-20 rounded-full bg-paper/10" />
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            {["bg-paper/60", "bg-accent", "bg-[#4ade80]"].map((c, i) => (
-              <div key={i} className="space-y-2 rounded-lg border border-night-line p-2.5">
-                <div className="h-1.5 w-2/3 rounded-full bg-paper/20" />
-                <div className={`h-3 w-1/2 rounded ${c}`} />
-              </div>
-            ))}
-          </div>
-          <div className="rounded-lg border border-night-line p-3">
-            <div className="mb-2 h-1.5 w-20 rounded-full bg-paper/20" />
-            <svg viewBox="0 0 300 110" className="h-auto w-full">
-              <defs>
-                <linearGradient id="eq-fill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#ff5a2c" stopOpacity="0.35" />
-                  <stop offset="100%" stopColor="#ff5a2c" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              {[25, 55, 85].map((y) => (
-                <line key={y} x1="0" x2="300" y1={y} y2={y} stroke="rgb(246 244 239 / 0.07)" />
-              ))}
-              <line x1="0" x2="300" y1="96" y2="96" stroke="#ff5a2c" strokeOpacity="0.5" strokeDasharray="4 4" />
-              <path
-                d="M0 80 L25 74 L50 78 L75 62 L100 66 L125 52 L150 56 L175 40 L200 46 L225 32 L250 36 L275 22 L300 18 L300 110 L0 110 Z"
-                fill="url(#eq-fill)"
-              />
-              <path
-                className="draw-line"
-                pathLength={1}
-                d="M0 80 L25 74 L50 78 L75 62 L100 66 L125 52 L150 56 L175 40 L200 46 L225 32 L250 36 L275 22 L300 18"
-                fill="none"
-                stroke="#ff5a2c"
-                strokeWidth="2.5"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
-          <div className="space-y-1.5">
-            {[0, 1, 2].map((i) => (
-              <div key={i} className="flex items-center gap-2 rounded-md bg-paper/[0.04] px-2.5 py-2">
-                <div className={`size-2 rounded-full ${i === 1 ? "bg-accent" : "bg-[#4ade80]"}`} />
-                <div className="h-1.5 flex-1 rounded-full bg-paper/15" />
-                <div className="h-1.5 w-10 rounded-full bg-paper/25" />
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className="overflow-hidden rounded-xl border border-night-line bg-night shadow-2xl transition-transform duration-500 hover:-translate-y-1">
+      <div className="flex items-center gap-1.5 border-b border-night-line px-3.5 py-2.5" aria-hidden>
+        <span className="size-2 rounded-full bg-paper/20" />
+        <span className="size-2 rounded-full bg-paper/20" />
+        <span className="size-2 rounded-full bg-paper/20" />
+        <span className="ml-2 truncate font-mono text-[10px] text-night-muted">{url}</span>
       </div>
+      {children}
     </div>
   );
 }
