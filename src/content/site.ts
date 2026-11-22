@@ -43,7 +43,7 @@ export const site = {
   /** Links for the Funded Edge case study. Leave empty to hide a button. */
   fundedEdge: {
     liveUrl: "https://funded-edge-coral.vercel.app",
-    repoUrl: "https://github.com/Itzharry07/Funded-Edge",
+    repoUrl: "",
   },
 } as const;
 

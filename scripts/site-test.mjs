@@ -136,6 +136,8 @@ for (const [label, viewport] of [
   check(await page.getByRole("link", { name: "Send by email instead" }).isVisible(), T("email fallback offered"));
   const fe = await page.locator('#work a[href="https://funded-edge-coral.vercel.app"]').count();
   check(fe === 1, T("Funded Edge 'Visit live site' link present"));
+  const repo = await page.locator('#work a[href*="github.com"]').count();
+  check(repo === 0, T("no 'View the code' link on the portfolio"));
   const directWa = await page.locator('#contact a[href^="https://wa.me/918105272320"]').count();
   check(directWa >= 1, T("WhatsApp contact link present"));
 
