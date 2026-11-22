@@ -154,13 +154,17 @@ export const fundedEdge = {
   stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "Supabase", "Clerk"],
 } as const;
 
-export const concepts = [
+/** Live demo sites: real, working pages for fictional businesses. Always labelled as demos. */
+export const demos = [
   {
-    name: "Neighbourhood café",
-    body: "A warm one-page site with a menu, opening hours, a map and a one-tap WhatsApp order button.",
-    palette: ["#f3e3cf", "#9a5b33", "#2d1d14"],
-    kind: "cafe",
+    name: "Mobile phone shop",
+    body: "A live sample site for a phone shop: popular phones, offers, repairs, WhatsApp enquiry buttons and opening hours.",
+    href: "/demo/mobile-shop",
+    image: "/work/mobile-shop-demo.webp",
   },
+] as const;
+
+export const concepts = [
   {
     name: "Physio clinic",
     body: "A calm multi-page site with services, practitioner profiles and a simple appointment request form.",

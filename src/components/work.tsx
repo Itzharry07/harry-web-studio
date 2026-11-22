@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import { ArrowUpRight, Check } from "lucide-react";
-import { concepts, fundedEdge } from "@/content/content";
+import { concepts, demos, fundedEdge } from "@/content/content";
 import { site } from "@/content/site";
 import { Accent, SectionHeading, delay } from "./ui";
 
@@ -19,7 +19,7 @@ export function Work() {
               Real work, <Accent>honestly</Accent> labelled.
             </>
           }
-          intro="My featured project is a full SaaS product I designed and built end to end. The smaller pieces below are concepts that show the range of styles I can design."
+          intro="My featured project is a full SaaS product I designed and built end to end. Below it: a live demo site and a design concept, both clearly labelled, built to show what I can make for businesses like yours."
         />
 
         {/* Featured case study */}
@@ -133,8 +133,39 @@ export function Work() {
           </div>
         </article>
 
-        {/* Concepts */}
+        {/* Demos and concepts */}
         <div className="mt-6 grid gap-6 md:grid-cols-3">
+          {demos.map((demo) => (
+            <a
+              key={demo.name}
+              href={demo.href}
+              data-reveal
+              className="group overflow-hidden rounded-3xl border border-night-line bg-night-2 transition-[translate,border-color] duration-300 hover:-translate-y-1 hover:border-accent"
+            >
+              <div className="aspect-[16/10] overflow-hidden bg-night">
+                <Image
+                  src={demo.image}
+                  alt={`Screenshot of the ${demo.name.toLowerCase()} demo website`}
+                  width={1200}
+                  height={720}
+                  sizes="(min-width: 768px) 360px, 100vw"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+              </div>
+              <div className="p-6">
+                <span className="rounded-full border border-dashed border-night-muted/60 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-night-muted">
+                  Live demo · fictional business
+                </span>
+                <h3 className="mt-4 text-xl font-semibold tracking-tight">{demo.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-night-muted">{demo.body}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent">
+                  Open the demo
+                  <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
+                </span>
+              </div>
+            </a>
+          ))}
+
           {concepts.map((c, i) => (
             <article
               key={c.name}
