@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import { ArrowUpRight, Check } from "lucide-react";
-import { concepts, demos, fundedEdge } from "@/content/content";
+import { demos, fundedEdge } from "@/content/content";
 import { site } from "@/content/site";
 import { Accent, SectionHeading, delay } from "./ui";
 
@@ -19,7 +19,7 @@ export function Work() {
               Real work, <Accent>honestly</Accent> labelled.
             </>
           }
-          intro="My featured project is a full SaaS product I designed and built end to end. Below it: a live demo site and a design concept, both clearly labelled, built to show what I can make for businesses like yours."
+          intro="My featured project is a full SaaS product I designed and built end to end. Below it: live demo sites for fictional businesses, clearly labelled, built to show what I can make for businesses like yours."
         />
 
         {/* Featured case study */}
@@ -133,7 +133,7 @@ export function Work() {
           </div>
         </article>
 
-        {/* Demos and concepts */}
+        {/* Live demos */}
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {demos.map((demo) => (
             <a
@@ -164,24 +164,6 @@ export function Work() {
                 </span>
               </div>
             </a>
-          ))}
-
-          {concepts.map((c, i) => (
-            <article
-              key={c.name}
-              data-reveal
-              style={delay(i * 100)}
-              className="group overflow-hidden rounded-3xl border border-night-line bg-night-2 transition-transform duration-300 hover:-translate-y-1"
-            >
-              <ConceptThumb palette={c.palette} kind={c.kind} />
-              <div className="p-6">
-                <span className="rounded-full border border-dashed border-night-muted/60 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-night-muted">
-                  Concept · not a client project
-                </span>
-                <h3 className="mt-4 text-xl font-semibold tracking-tight">{c.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-night-muted">{c.body}</p>
-              </div>
-            </article>
           ))}
 
           <a
@@ -217,50 +199,6 @@ function BrowserFrame({ url, children }: { url: string; children: ReactNode }) {
         <span className="ml-2 truncate font-mono text-[10px] text-night-muted">{url}</span>
       </div>
       {children}
-    </div>
-  );
-}
-
-function ConceptThumb({ palette, kind }: { palette: readonly string[]; kind: string }) {
-  const [bg, mid, dark] = palette;
-  return (
-    <div className="relative aspect-[16/10] overflow-hidden p-5" style={{ background: bg }} aria-hidden>
-      <div className="h-full rounded-xl bg-white/70 p-4 shadow-sm transition-transform duration-500 group-hover:scale-[1.03]">
-        <div className="flex items-center justify-between">
-          <div className="h-2.5 w-14 rounded-full" style={{ background: dark }} />
-          <div className="h-4 w-12 rounded-full" style={{ background: mid }} />
-        </div>
-        {kind === "cafe" ? (
-          <div className="mt-4 grid grid-cols-[1fr_0.8fr] gap-3">
-            <div className="space-y-2">
-              <div className="h-3 w-full rounded" style={{ background: dark }} />
-              <div className="h-3 w-3/4 rounded" style={{ background: dark }} />
-              <div className="mt-3 space-y-1.5">
-                {[0, 1, 2].map((i) => (
-                  <div key={i} className="flex justify-between">
-                    <div className="h-1.5 w-2/3 rounded-full" style={{ background: mid, opacity: 0.5 }} />
-                    <div className="h-1.5 w-4 rounded-full" style={{ background: mid }} />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="aspect-square rounded-full" style={{ background: mid, opacity: 0.85 }} />
-          </div>
-        ) : (
-          <div className="mt-4 space-y-3">
-            <div className="h-3 w-2/3 rounded" style={{ background: dark }} />
-            <div className="grid grid-cols-3 gap-2">
-              {[0, 1, 2].map((i) => (
-                <div key={i} className="space-y-1.5 rounded-lg p-2" style={{ background: bg }}>
-                  <div className="size-4 rounded-full" style={{ background: mid }} />
-                  <div className="h-1.5 w-full rounded-full" style={{ background: dark, opacity: 0.4 }} />
-                </div>
-              ))}
-            </div>
-            <div className="h-5 w-24 rounded-full" style={{ background: dark }} />
-          </div>
-        )}
-      </div>
     </div>
   );
 }

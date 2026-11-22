@@ -162,13 +162,10 @@ export const demos = [
     href: "/demo/mobile-shop",
     image: "/work/mobile-shop-demo.webp",
   },
-] as const;
-
-export const concepts = [
   {
-    name: "Physio clinic",
-    body: "A calm multi-page site with services, practitioner profiles and a simple appointment request form.",
-    palette: ["#e3f0ee", "#2f7d73", "#12302c"],
-    kind: "clinic",
+    name: "Family clinic",
+    body: "A live sample site for a clinic: services, doctors, OPD timings and an appointment request that arrives on WhatsApp.",
+    href: "/demo/clinic",
+    image: "/work/clinic-demo.webp",
   },
 ] as const;

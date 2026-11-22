@@ -31,8 +31,9 @@ const shop = {
   name: "NovaCell Mobiles",
   city: "Your City",
   address: "Shop 12, Main Road, Your City",
-  // No real number: WhatsApp links open the share screen with the message ready.
-  whatsapp: (text: string) => `https://wa.me/?text=${encodeURIComponent(text)}`,
+  // The shop is fictional, so WhatsApp buttons message Harry Web Studio, tagged as coming from the demo.
+  // On a real client site this is the shop's own WhatsApp number.
+  whatsapp: (text: string) => `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(`[Mobile shop demo] ${text}`)}`,
 };
 
 export const metadata: Metadata = {
@@ -117,7 +118,7 @@ export default function MobileShopDemo() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-2 text-xs sm:text-sm">
           <p>
             <span className="mr-2 rounded bg-[#ffd23f] px-1.5 py-0.5 font-bold text-[#0b1530]">DEMO</span>
-            Sample website by {site.name}. Fictional shop, sample prices.
+            Sample website by {site.name}. Fictional shop, sample prices. WhatsApp buttons message {site.name}.
           </p>
           <Link href="/#work" className="inline-flex items-center gap-1 font-medium text-[#ffd23f] hover:underline">
             <ArrowLeft className="size-3.5" aria-hidden /> Back to {site.name}

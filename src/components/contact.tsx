@@ -32,7 +32,7 @@ export function Contact() {
                 <p className="text-sm text-muted">Prefer email?</p>
                 <a
                   href={`mailto:${site.email}?subject=${encodeURIComponent("Website enquiry")}`}
-                  className="font-medium underline decoration-accent decoration-2 underline-offset-4"
+                  className="inline-block py-1.5 font-medium underline decoration-accent decoration-2 underline-offset-4"
                 >
                   {site.email}
                 </a>
@@ -48,7 +48,7 @@ export function Contact() {
                   href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Hi Harry, I'd like to know more about a website.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium underline decoration-accent decoration-2 underline-offset-4"
+                  className="inline-block py-1.5 font-medium underline decoration-accent decoration-2 underline-offset-4"
                 >
                   {site.phoneDisplay}
                 </a>
