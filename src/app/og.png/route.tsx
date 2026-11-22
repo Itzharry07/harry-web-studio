@@ -24,12 +24,12 @@ export function GET() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          {/* Same kite mark as src/components/logo.tsx */}
+          {/* Same H mark as src/components/logo.tsx */}
           <svg width="64" height="64" viewBox="0 0 32 32">
             <rect width="32" height="32" rx="9" fill="#15140f" />
-            <path d="M16 5 L8 13.5 L16 26 Z" fill="#ff5a2c" />
-            <path d="M16 5 L24 13.5 L16 26 Z" fill="#f6f4ef" />
-            <path d="M8 13.5 H24" stroke="#15140f" strokeWidth="1.2" />
+            <rect x="9" y="8" width="4" height="16" rx="1.2" fill="#f6f4ef" />
+            <rect x="19" y="8" width="4" height="16" rx="1.2" fill="#f6f4ef" />
+            <rect x="13" y="14" width="6" height="4" fill="#ff5a2c" />
           </svg>
           <div style={{ fontSize: 34, fontWeight: 700 }}>{site.name}</div>
         </div>
