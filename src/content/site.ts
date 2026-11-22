@@ -43,7 +43,7 @@ export const site = {
   /** Links for the Funded Edge case study. Leave empty to hide a button. */
   fundedEdge: {
     liveUrl: "",
-    repoUrl: "",
+    repoUrl: "https://github.com/Itzharry07/Funded-Edge",
   },
 } as const;
 
