@@ -43,8 +43,15 @@ export function Contact() {
                 <MessageSquareText className="size-5" aria-hidden />
               </span>
               <div>
-                <p className="text-sm text-muted">First step</p>
-                <p className="font-medium">A free, no-obligation call</p>
+                <p className="text-sm text-muted">WhatsApp or call</p>
+                <a
+                  href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Hi Harry, I'd like to know more about a website.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium underline decoration-accent decoration-2 underline-offset-4"
+                >
+                  {site.phoneDisplay}
+                </a>
               </div>
             </li>
             <li className="flex items-center gap-4">

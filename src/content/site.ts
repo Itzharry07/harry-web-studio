@@ -23,7 +23,13 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://harry-web-studio.vercel.app").replace(/\/$/, ""),
 
   /** Public contact email. Shown on the site and used by the email link. */
-  email: "hello@example.com",
+  email: "harrywebstudio73@gmail.com",
+
+  /** WhatsApp number in international format, digits only (used for wa.me links). */
+  whatsapp: "918105272320",
+
+  /** The same number, formatted for people to read. */
+  phoneDisplay: "+91 81052 72320",
 
   /**
    * Formspree form ID (the part after /f/ in your Formspree endpoint, e.g. "xyzabcd").
