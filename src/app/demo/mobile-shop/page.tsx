@@ -92,7 +92,7 @@ function WhatsAppButton({ text, children, className = "" }: { text: string; chil
 function PhoneArt({ hue, className = "" }: { hue: string; className?: string }) {
   return (
     <div
-      className={`relative aspect-[9/18] rounded-[1.6rem] border-[5px] border-[#0b1530] bg-[#0b1530] shadow-xl ${className}`}
+      className={`relative aspect-[9/18] rounded-[1.6rem] border-[5px] border-[#0b1530] bg-[#0b1530] shadow-md ${className}`}
       aria-hidden
     >
       <div
@@ -180,9 +180,9 @@ export default function MobileShopDemo() {
             </div>
 
             <div className="relative mx-auto flex w-full max-w-md items-end justify-center gap-4 py-4" aria-hidden>
-              <PhoneArt hue="#ff7a1a" className="build float w-[30%] -rotate-6" />
-              <PhoneArt hue="#2f6bff" className="build float w-[38%]" />
-              <PhoneArt hue="#12b886" className="build float w-[30%] rotate-6" />
+              <PhoneArt hue="#ff7a1a" className="build w-[30%] -rotate-6" />
+              <PhoneArt hue="#2f6bff" className="build w-[38%]" />
+              <PhoneArt hue="#12b886" className="build w-[30%] rotate-6" />
               <div className="build absolute -bottom-2 left-2 rounded-2xl bg-white px-4 py-3 shadow-lg" style={d(600)}>
                 <p className="text-xs font-semibold text-[#0b1530]/60">Today&apos;s offer</p>
                 <p className="font-extrabold">Free screen guard</p>
