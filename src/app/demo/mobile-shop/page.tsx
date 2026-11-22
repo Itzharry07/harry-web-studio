@@ -100,7 +100,7 @@ function PhoneArt({ hue, className = "" }: { hue: string; className?: string }) 
         style={{ background: `linear-gradient(160deg, ${hue} 0%, #0b1530 85%)` }}
       >
         <div className="absolute left-1/2 top-2 h-1.5 w-10 -translate-x-1/2 rounded-full bg-black/60" />
-        <div className="absolute -right-6 top-10 size-24 rounded-full bg-white/20 blur-xl" />
+        <div className="absolute -right-10 top-4 size-36 rounded-full bg-[radial-gradient(circle,rgb(255_255_255/0.25),transparent_65%)]" />
         <div className="absolute inset-x-3 bottom-4 space-y-1.5">
           <div className="h-1.5 w-2/3 rounded-full bg-white/70" />
           <div className="h-1.5 w-1/2 rounded-full bg-white/40" />
@@ -193,7 +193,7 @@ export default function MobileShopDemo() {
 
         {/* Brands */}
         <section aria-label="Brands we sell" className="border-y border-[#0b1530]/10 bg-white py-5">
-          <ul className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-8 gap-y-3 px-4 text-lg font-bold text-[#0b1530]/45">
+          <ul className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-8 gap-y-3 px-4 text-lg font-bold text-[#0b1530]/65">
             {brands.map((b) => (
               <li key={b}>{b}</li>
             ))}

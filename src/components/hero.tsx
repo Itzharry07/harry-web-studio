@@ -8,7 +8,7 @@ export function Hero() {
       {/* Decorative background, clipped so it never widens the page on phones */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden>
         <div className="grid-bg absolute inset-0" />
-        <div className="absolute -top-40 right-[-10%] size-[520px] rounded-full bg-accent/20 blur-[120px]" />
+        <div className="absolute -top-72 right-[-25%] size-[900px] rounded-full bg-[radial-gradient(circle,rgb(255_90_44/0.22),transparent_60%)]" />
       </div>
 
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10">

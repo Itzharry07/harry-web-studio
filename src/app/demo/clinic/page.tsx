@@ -111,15 +111,15 @@ export default function ClinicDemo() {
         {/* Hero */}
         <section className="relative overflow-hidden">
           <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-            <div className="absolute -right-24 -top-24 size-[420px] rounded-full bg-[#2f9e8f]/15 blur-3xl" />
+            <div className="absolute -right-40 -top-40 size-[620px] rounded-full bg-[radial-gradient(circle,rgb(47_158_143/0.18),transparent_65%)]" />
           </div>
           <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:py-20 lg:grid-cols-[1.1fr_1fr]">
             <div>
-              <p className="build inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#2f9e8f] ring-1 ring-[#2f9e8f]/25" style={d(0)}>
+              <p className="build inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#1d7468] ring-1 ring-[#2f9e8f]/25" style={d(0)}>
                 <ShieldCheck className="size-4" aria-hidden /> Family doctors · Lab tests · Vaccinations
               </p>
               <h1 className="build mt-5 text-[clamp(2.3rem,6.5vw,4rem)] font-bold leading-[1.05] tracking-[-0.03em]" style={d(80)}>
-                Caring for your whole family, <span className="text-[#2f9e8f]">close to home.</span>
+                Caring for your whole family, <span className="text-[#1d7468]">close to home.</span>
               </h1>
               <p className="build mt-5 max-w-lg text-lg leading-relaxed text-[#0f3d3a]/70" style={d(160)}>
                 Book an appointment on WhatsApp in under a minute, check today&apos;s timings and get your lab reports on
@@ -147,17 +147,17 @@ export default function ClinicDemo() {
             <div className="build relative mx-auto w-full max-w-sm" style={d(200)} aria-hidden>
               <div className="rounded-[2rem] bg-white p-6 shadow-[0_30px_60px_-30px_rgb(15_61_58/0.45)] ring-1 ring-[#0f3d3a]/5">
                 <div className="flex items-center gap-3">
-                  <div className="grid size-12 place-items-center rounded-full bg-[#e3f3f0] font-bold text-[#2f9e8f]">AR</div>
+                  <div className="grid size-12 place-items-center rounded-full bg-[#e3f3f0] font-bold text-[#1d7468]">AR</div>
                   <div>
                     <p className="font-bold">Dr. A. Rao</p>
-                    <p className="text-sm text-[#0f3d3a]/60">General Physician</p>
+                    <p className="text-sm text-[#0f3d3a]/75">General Physician</p>
                   </div>
                 </div>
                 <div className="mt-5 grid grid-cols-3 gap-2 text-center text-sm">
                   {["9:30", "10:00", "10:30", "11:00", "11:30", "12:00"].map((t, i) => (
                     <span
                       key={t}
-                      className={`rounded-xl py-2 font-semibold ${i === 2 ? "bg-[#2f9e8f] text-white" : "bg-[#f5faf9] text-[#0f3d3a]/70"}`}
+                      className={`rounded-xl py-2 font-semibold ${i === 2 ? "bg-[#1d7468] text-white" : "bg-[#f5faf9] text-[#0f3d3a]/70"}`}
                     >
                       {t}
                     </span>
@@ -169,7 +169,7 @@ export default function ClinicDemo() {
                 </div>
               </div>
               <div className="float absolute -bottom-16 left-4 rounded-2xl bg-white px-4 py-2.5 shadow-lg ring-1 ring-[#0f3d3a]/5">
-                <p className="text-xs text-[#0f3d3a]/60">Reports</p>
+                <p className="text-xs text-[#0f3d3a]/75">Reports</p>
                 <p className="text-sm font-bold">Sent on WhatsApp</p>
               </div>
             </div>
