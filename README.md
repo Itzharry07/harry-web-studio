@@ -47,7 +47,11 @@ Until you add a Formspree ID, the form opens the visitor's email app with their 
 
 ## Deploy
 
-The site is plain static files, so any static host works.
+**Live now:** https://harry-web-studio.harrywebstudio73.workers.dev, on Cloudflare (Workers static assets,
+set up from GitHub repo `Itzharry07/harry-web-studio`). Every `git push` to `main` rebuilds and redeploys
+automatically. Settings for that live in `wrangler.jsonc`.
+
+The site is plain static files, so any static host works. The options below are for reference.
 
 > **Heads-up on Vercel's free plan.** Vercel's free "Hobby" plan is for personal, non-commercial use.
 > A business site that sells your services counts as commercial use, so for the long term either use

@@ -18,9 +18,9 @@ export const site = {
 
   /**
    * Your live domain, without a trailing slash. Used for the sitemap, canonical
-   * links and share images. Set NEXT_PUBLIC_SITE_URL in Vercel, or edit the fallback.
+   * links and share images. Change this when you connect your own domain.
    */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://harry-web-studio.vercel.app").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://harry-web-studio.harrywebstudio73.workers.dev").replace(/\/$/, ""),
 
   /** Public contact email. Shown on the site and used by the email link. */
   email: "harrywebstudio73@gmail.com",
